@@ -1,0 +1,27 @@
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+footer{
+    background-color: #f8f3e7;
+    color: #1f1f1f;
+    a{
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.lang-switch a {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.lang-switch a.fw-bold {
+    text-decoration: underline;
+}

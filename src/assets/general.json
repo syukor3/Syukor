@@ -1,0 +1,154 @@
+{
+  "response": "SUCCESS",
+  "content": {
+      "id": 147,
+      "projectName": "CloutHaus",
+      "projectShortName": "PS 1",
+      "currency": "MYR",
+      "countryCode": "60",
+      "phoneNo": "62669968",
+      "tenure": "LEASEHOLD",
+      "propertyCategory": "TWO_STOREY_TERRACE_HOUSE",
+      "propertyType": [
+          "INDUSTRIAL",
+          "RESIDENTIAL"
+      ],
+      "sizeUnit": "SQUARE_FEET",
+      "address1": "Mezzanine Floor, Menara TA One,",
+      "address2": "No. 22 Jalan P.Ramlee,",
+      "address3": "50250 Kuala Lumpur, Malaysia.",
+      "country": "MYS",
+      "state": "04",
+      "city": "Melaka",
+      "postalCode": "50250",
+      "longitude": "102.2128698",
+      "latitude": "2.2963816",
+      "descriptionTitle": {
+        "en": "KUALA LUMPUR CITY CENTRE RESIDENCES",
+        "cn": "吉隆坡市中心住宅"},
+      "descriptionSubTitle": "",
+      "descriptionOverview": "",
+      "logo": "https://clouthaus.com.my/assets/web/images/hero-video.mp4",
+      "sitePlan": null,
+      "landSize": 0.0,
+      "metricUnit": null,
+      "bumiDiscount": null,
+      "totalUnit": 28,
+      "showStoreyPlan": false,
+      "showSitePlan": false,
+      "email": "marketing@ta.com.my",
+      "projectDetails": [
+          {
+              "id": 90,
+              "metId": 5,
+              "type": "PROJECT_DETAILS",
+              "name": {
+                "en": "THE ULTIMATE ADDRESS OF LUXURY",
+                "cn": "终极奢华地址"},
+              "sectionId": "concept",
+              "description": {
+                "en": "Welcome to CloutHaus, an address crafted by the elite, for the elite. Join a network of like-minded modern accelerators and witness the synergy of ambitious and influential minds as they redefine KL's landscape with unparalleled elegance. Discover a lifestyle of unparalleled luxury with our exquisitely crafted residences and international branded hotel.",
+                "cn": "欢迎来到 CloutHaus，这是一个为精英打造、由精英拥有的地址。加入一个志同道合的现代加速者网络，见证雄心勃勃与极具影响力的思想者如何以无与伦比的优雅重新定义吉隆坡的城市风貌。通过我们精心打造的高端住宅和国际品牌酒店，探索无与伦比的奢华生活方式。"},
+              "param1": "",
+              "status": 1,
+              "createdDatetime": "2025-01-22 17:13:44",
+              "updatedDatetime": "2025-01-22 17:13:44",
+              "imageUrl": "https://clouthaus.com.my/assets/web/images/en/section-1-content.jpg"
+          },
+          {
+              "id": 99,
+              "metId": 5,
+              "type": "PROJECT_DETAILS",
+              "name": {
+                "en": "THE INSPIRATION OF ‘CLOUTHAUS’",
+                "cn": "CLOUTHAUS 的灵感来源"},
+              "description": {
+                "en": "Clout /klaut/ <br> Clout speaks about a superior influence and reputation. And we believe that every individual is capable of influencing different areas of life in one way or another.",
+                "cn": "Clout /klaut/ <br> Clout 代表着卓越的影响力与声誉。我们相信，每一个人都有能力在某种程度上影响生活的不同领域。"},
+              "param1": {
+                "en": "Haus /haus/ <br> ‘Haus’ is a German word for a home. Our Haus is a space, a home that encourages chanced encounters with one another, a connected network of like minded individuals. And through this network, a propagation of ideas and experiences are shared and synergised, a tribe of excellence is form.",
+                "cn": "Haus /haus/ <br> ‘Haus’ 是德语中“家”的意思。我们的 Haus 是一个空间，一个鼓励人们偶遇的家，一个由志同道合的人组成的互联网络。通过这个网络，思想与经验得以传播和融合，形成一个卓越的群体。"},
+              "status": 1,
+              "createdDatetime": "2025-02-06 17:02:46",
+              "updatedDatetime": "2025-02-06 17:02:46",
+              "imageUrl": "https://clouthaus.com.my/assets/web/images/en/section-2-content.jpg"
+          },
+          {
+              "id": 100,
+              "metId": 5,
+              "type": "PROJECT_DETAILS",
+              "name": {
+                "en": "KUALA LUMPUR’S MOST ICONIC ADDRESS",
+                "cn": "吉隆坡最具标志性的地址"},
+              "sectionId": "serviced-residences",
+              "description": {
+                "en": "Kuala Lumpur, a city shaped by visionaries and innovators, unfolds its majestic story through tales of legacy and pride. From one of the last prime parcels facing the Petronas Twin Towers, CloutHaus rises as a new landmark, a testament to the city’s enduring influence and rich tapestry.",
+                "cn": "吉隆坡，这座由远见卓识者和创新者塑造的城市，通过传承与荣耀的故事展开其宏伟篇章。在面向双子塔的最后几块黄金地段之一，CloutHaus 崛起为新的地标，彰显这座城市持久的影响力与丰富多彩的风貌。"},
+              "param1": "",
+              "status": 1,
+              "createdDatetime": "2025-02-06 17:03:04",
+              "updatedDatetime": "2025-02-06 17:03:04",
+              "imageUrl": "https://clouthaus.com.my/assets/web/images/en/section-3-content.jpg"
+          },
+          {
+            "id": 101,
+            "metId": 5,
+            "type": "PROJECT_DETAILS",
+            "name": {
+                "en": "INTERNATIONAL BRANDED HOTEL SERVICES",
+                "cn": "国际品牌酒店服务"},
+            "description": {
+                "en": "CloutHaus, serviced by TA Global’s Paradox Hotel & Resort, embodies Kuala Lumpur’s cultural ethos, inspiring collaboration and conversation. Complemented with an extraordinary mix of world-class amenities and bespoke services, it heralds a new era of luxury living for the privileged few. Paradox spans four countries with six hotels and over 1,350 rooms, crafting incredible memories and stories.",
+                "cn": "CloutHaus 由 TA Global 旗下的 Paradox 酒店与度假村提供服务，充分体现了吉隆坡的文化精神，激发协作与交流。配备世界级设施与量身定制的专属服务，为少数尊贵人士开启奢华生活新时代。Paradox 业务遍及四个国家，拥有六家酒店和超过 1350 间客房，缔造无数精彩回忆与故事。"},
+            "param1": {
+                "en": "People are not just looking to travel again; they are looking for meaningful emotional connections and memories.",
+                "cn": "人们不仅仅渴望再次旅行，更渴望建立有意义的情感联系与回忆。"},
+            "status": 1,
+            "createdDatetime": "2025-02-06 17:03:04",
+            "updatedDatetime": "2025-02-06 17:03:04",
+            "imageUrl": "https://clouthaus.com.my/assets/web/images/en/section-4-content.jpg"
+        },
+        {
+            "id": 102,
+            "metId": 5,
+            "type": "PROJECT_DETAILS",
+            "name": {
+                "en": "ELEVATED FACILITIES FOR LUXURIOUS LIVING",
+                "cn": "奢华生活的高端设施"},
+            "description": {
+                "en": "At CloutHaus, every facility is meticulously crafted for exclusive, luxurious living. Set against the sweeping panoramas of KLCC and the dynamic cityscape, indulge in the highest 50m infinity pool, relish handcrafted cocktails at the rooftop bar, or refine your physique in the state-of-the-art fitness centre.",
+                "cn": "在 CloutHaus，每一项设施都精心打造，只为带来尊贵奢华的生活体验。面朝 KLCC 的壮丽全景与充满活力的城市风貌，您可尽情享受高达 50 米的无边际泳池、在屋顶酒吧品味手工调制的鸡尾酒，或在先进的健身中心雕塑体型。"},
+            "param1": "",
+            "status": 1,
+            "createdDatetime": "2025-02-06 17:03:04",
+            "updatedDatetime": "2025-02-06 17:03:04",
+            "imageUrl": "https://clouthaus.com.my/assets/web/images/en/section-5-content.jpg"
+        },
+        {
+            "id": 103,
+            "metId": 5,
+            "type": "PROJECT_DETAILS",
+            "name": {
+                "en": "A THOUSAND DOORS, NEXT DOOR",
+                "cn": "千扇之门，近在咫尺"},
+            "sectionId": "location",
+            "description": {
+                "en": "Nestled in the vibrant heart of Kuala Lumpur, CloutHaus stands as a beacon of exquisite luxury living, mere moments from the iconic Petronas Twin Towers and an array of esteemed tourist destinations. With effortless access to highways and key routes, CloutHaus offers an unparalleled location for those who seek to immerse themselves in the city’s vibrant energy and indulge in its opulent lifestyle.",
+                "cn": "坐落于吉隆坡充满活力的核心地带，CloutHaus 是奢华生活的典范，距离标志性的双子塔及众多著名旅游景点仅数步之遥。通过便捷的高速公路与主要干道，CloutHaus 为渴望沉浸于城市活力与享受尊贵生活方式的人们提供了无与伦比的理想地点。"},
+            "param1": "",
+            "status": 1,
+            "createdDatetime": "2025-02-06 17:03:04",
+            "updatedDatetime": "2025-02-06 17:03:04",
+            "imageUrl": "https://clouthaus.com.my/assets/web/images/en/preview-map.jpg"
+        }
+      ],
+      "propertyInfo": [],
+      "gallery": [],
+      "layouts": [],
+      "documents": [],
+      "map": []
+  },
+  "content2": null,
+  "content3": null,
+  "pagination": null
+}

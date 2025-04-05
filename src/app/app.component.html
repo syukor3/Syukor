@@ -1,0 +1,189 @@
+<!-- ***One column layout***
+  <div *ngFor = "let section of projectDetails" class = "my-5">
+    <div class = "text-center mb-3">
+      <img [src] = "section.imageUrl" alt = "Image" class = "img-fluid" *ngIf = "section.imageUrl">
+    </div>
+    <h3 class = "text-center">{{ section.name }}</h3>
+    <p [innerHTML]="section.description"></p>
+    <p *ngIf="section.param1" [innerHTML]="section.param1"></p>
+  </div>-->
+
+  <!--*** Navigation Bar ***-->
+  <nav class = "navbar fixed-top custom-navbar px-4" [class.scrolled]="isScrolled">
+    <div class = "container-fluid d-flex justify-content-between align-items-center">
+      <!--*** logo ***-->
+      <a class = "navbar-brand d-flex align-items-center text-white" href = "#"(click)="scrollToTop($event)">
+        <img src = "assets/logo.png" alt = "Logo" height = "45" class= "me-2" />
+      </a>
+
+      
+      <div class="d-flex align-items-center gap-3">
+        <!--*** Language ***-->
+        <div class="lang-switch text-white fw-semibold">
+          <a href="#" (click)="toggleLang('EN')" [class.fw-bold]="currentLang === 'EN'" class="text-white me-2">EN</a> |
+          <a href="#" (click)="toggleLang('CN')" [class.fw-bold]="currentLang === 'CN'" class="text-white me-2">CN</a>
+        </div>
+
+        <!--*** Mobile Toggle***-->
+        <div class="dropdown">
+          <button 
+            class = "btn bg-transparent border-0"
+            type = "button" 
+            id="menuDropdown"
+            data-bs-toggle= "dropdown" 
+            aria-expanded= "false">
+            <i class="bi bi-list fs-1 text-white"></i>
+          </button>
+          <ul class = "dropdown-menu dropdown-menu-end menu-float shadow" aria-labelledby="menuDropdown" data-bs-auto-close="false">
+            <li><button class="dropdown-item text-uppercase fw-semibold bg-transparent border-0" (click)="scrollToTop($event)">{{ 'HOME' | translate }}</button></li>
+            <li><a class="dropdown-item text-uppercase fw-semibold" href="#concept">{{ 'CONCEPT' | translate }}</a></li>
+            <li><a class="dropdown-item text-uppercase fw-semibold" href="#serviced-residences">{{ 'SERVICED_RESIDENCES' | translate }}</a></li>
+            <li><a class="dropdown-item text-uppercase fw-semibold" href="#location">{{ 'LOCATION' | translate }}</a></li>
+            <li><a class="dropdown-item text-uppercase fw-semibold" href="#register">{{ 'REGISTER' | translate }}</a></li>
+          </ul>
+        </div>  
+      </div>
+    </div>
+  </nav>
+
+  <!--*** video section ***-->
+  <div class = "video-wrapper">
+    <video 
+      autoplay
+      muted
+      loop
+      playsinline
+      class = "w-100" *ngIf = "heroVideoUrl">
+      <source [src] = "heroVideoUrl" type = "video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!--*** Main ***-->
+  <div class = "container">
+    <!--<h2 class = "text-center my-4">{{projectTitle}}</h2>-->
+  
+  <!--*** Two column layout ***-->
+  <div *ngFor = "let section of projectDetails; let i = index" class = "row my-5 align-items-center" 
+  [attr.id]="section.sectionId">
+    <!--section.name === 'THE ULTIMATE ADDRESS OF LUXURY' ? 'concept' : 
+    section.name === 'KUALA LUMPUR’S MOST ICONIC ADDRESS' ? 'serviced-residences' :
+    section.name === 'A THOUSAND DOORS, NEXT DOOR' ? 'location' :
+    null">-->
+    <div class = "col-md-6" [ngClass]="{ 'order-md-2': i % 2 === 0, 'order-md-1': i % 2 !==0 }" data-aos="fade-up" data-aos-delay="300">
+      <h3 class = "text-center text-md-start">{{ getTranslatedText(section, 'name') }}</h3>
+      <hr class="section-divider my-3"/>
+      <p [innerHTML] = "getTranslatedText(section, 'description')"></p>
+      <p *ngIf = "section.param1" [innerHTML] = "getTranslatedText(section, 'param1')"></p>
+    </div>
+    <div class = "col-md-6 text-center" [ngClass]="{'order-md-1': i % 2 === 0, 'order-md-2': i % 2 !== 0 }" data-aos="zoom-in" data-aos-delay="300">
+      <img [src] = "section.imageUrl" class = "img-fluid rounded section-img" alt="Section Image" data-aos="zoom-in" data-aos-delay="300" *ngIf = "section.imageUrl"/>
+    </div>
+  </div>
+</div>
+
+<!--<div id="serviced-residences" styles="margin-top: 200px;">
+  <h3>Test Target</h3>
+</div>-->
+
+<!--***Registration part***-->
+<section id="register" class="register-section py-4">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-8 text-center">
+        <h2 class="fw-semibold text-uppercase">{{ 'SEEKING_EXTRAVAGANCE' | translate }}</h2>
+        <p class="text-muted">{{ 'SUB_TEXT' | translate }}</p>
+      </div>
+    </div>
+  
+  <form #form="ngForm" class="row g-4" (ngSubmit)="onSubmit()" novalidate>
+    <div class="col-md-6">
+      <label class="form-label fw-semibold">{{ 'NAME' | translate }}</label>
+      <input type="text" class="form-control border-0 border-bottom rounded-0" [placeholder]="'YOUR_NAME' | translate">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label fw-semibold">{{ 'EMAIL' | translate }}</label>
+      <input type="text" class="form-control border-0 border-bottom rounded-0" placeholder="example@gmail.com">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label fw-semibold">{{ 'CONTACT_NUMBER' | translate }}</label>
+      <input type="text" class="form-control border-0 border-bottom rounded-0" placeholder="+60123456789">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label fw-semibold">{{ 'HEAR_ABOUT_US' | translate }}</label>
+      <select class="form-select border-0 border-bottom rounded-0">
+        <option selected disabled>{{ 'SELECT_HERE' | translate }}</option>
+        <option>{{ 'SOCIAL_MEDIA' | translate }}</option>
+        <option>{{ 'FRIEND_FAMILY' | translate }}</option>
+        <option>{{ 'NEWS' | translate }}</option>
+        <option>{{ 'EVENT' | translate }}</option>
+        <option>{{ 'BANNER' | translate }}</option>
+        <option>{{ 'OTHERS' | translate }}</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="agree" [(ngModel)] ="agree" name="agree"  required/>
+        <label class="form-check-label small text-muted" for="agree">
+          {{ 'PRIVACY_AGREE' | translate }}
+        </label>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-dark px-4 py-2 fw-semibold" [disabled]="!agree">{{ 'REGISTER_NOW' | translate }}</button>
+    </div>
+  </form>
+  </div>
+</section>
+
+<!--*** Footer Part ***-->
+<footer class="bg-light text-dark py-4">
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col-lg-6">
+        <h6 class="fw-bold">{{ getTranslatedTitle() }} {{ 'SALES_GALLERY' | translate }}</h6>
+        <p class="mb-1">{{ address1 }}</p>
+        <p class="mb-1">{{ address2 }}</p>
+        <p class="mb-1">{{ address3 }}</p>
+        <p class="mb-1 fw-semibold">{{ 'PHONE' | translate }}<span class="fw-normal">+603-2072 1277 / +60{{ phoneNo }}</span></p>
+        <p class="mb-1 fw-semibold">{{ 'EMAIL_LABEL' | translate }}<span class="fw-normal">{{ email }}</span></p>
+      </div>
+
+      <div class="col-lg-6 text-center text-lg-start mt-4 mt-lg-0">
+        <img src="assets/ta-global-logo.png" alt="TA Global" height="50" class="mb-2" />
+        <div class="d-flex gap-3 mb-3 justify-content-center justify-content-lg-start">
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-linkedin"></i>
+          <i class="bi bi-youtube"></i>
+        </div>
+        <p class="small">
+          {{ 'FOOTER_TEXT' | translate }}
+        </p>
+      </div>
+    </div>
+    <div class="text-center small text-muted">
+      ©️ 2025 TA Global. {{ 'ALL_RIGHTS_RESERVED' | translate }}
+      <a href="#" class="text-muted ms-2">{{ 'DISCLAIMER' | translate }}</a> |
+      <a href="#" class="text-muted ms-2">{{ 'PDP_NOTICE' | translate }}</a> |
+      <a href="#" class="text-muted ms-2">{{ 'TERMS_CONDITIONS' | translate }}</a> |
+      <a href="#" class="text-muted ms-2">{{ 'APDL' | translate }}</a> 
+    </div>
+  </div>
+</footer>
+
+<!--***troubleshoot***
+<p style="color: green; text-align: center;">Angular is working!</p>
+
+<div class="container">
+  <h2 class="text-center my-4">{{ projectTitle }}</h2>
+  <div *ngFor="let section of projectDetails" class="my-5">
+    <div class="text-center mb-3">
+      <img [src]="section.imageUrl" alt="Image" class="img-fluid" *ngIf="section.imageUrl">
+    </div>
+    <h3 class="text-center">{{ section.name }}</h3>
+    <p [innerHTML]="section.description"></p>
+    <p *ngIf="section.param1" [innerHTML]="section.param1"></p>
+  </div>
+</div>-->
